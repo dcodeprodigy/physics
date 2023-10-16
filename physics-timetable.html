@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>PHYSICS | JTSF</title>
+    <style>
+      /* General styling */
+      body {
+        max-width: 100%;
+        font-size: 8px;
+        margin: 0;
+        font-family: 'IBM Plex Serif', serif;
+      }
+
+      table {
+        table-layout: fixed;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse;
+        font-size: 1.5vw;
+        border-top: none;
+      }
+
+      thead{
+        border-top: none;
+      }
+
+      /* Styling To the WEEK header*/
+     
+      tr,
+      th,
+      td {
+        border: 2px solid black;
+      }
+      tr,
+      th,
+      td {
+        padding: 2.5vw;
+      }
+
+      caption{
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      thead th{
+        position: sticky;
+        top: 0;
+        background-color: orange;
+        color: black;
+        z-index: 100;
+        box-shadow: 0 6px 3px rgba(134, 131, 131, 0.411);
+        
+      }
+
+      .weeksA,.header{
+        background-color: orange;
+        color: white;
+      }
+      .headerA{
+        background-color: white;
+        color: black;
+      }
+
+      .time-of-week{
+        text-align: center;
+      }
+
+      .download{
+        color:white;
+        background-color:orange;
+        border: none;
+        padding: 0.8vw;
+        border-radius: 3px;
+        margin-top:0.5em;
+        margin-right: 0.5em;
+        font-weight: bold;
+        font-size: 1.2vw;
+        
+      }
+      .download:hover{
+        background: rgb(255,165,0);
+        background: -moz-linear-gradient(180deg, rgba(255,165,0,1) 52%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(255,165,0,1) 52%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(180deg, rgba(255,165,0,1) 52%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffa500",endColorstr="#ffffff",GradientType=1);
+      }
+      .download:active{
+        background: rgb(255,165,0);
+        background: -moz-linear-gradient(180deg, rgba(255,165,0,0.7679446778711485) 52%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(255,165,0,0.7679446778711485) 52%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(180deg, rgba(255,165,0,0.7679446778711485) 52%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffa500",endColorstr="#ffffff",GradientType=1);
+      }
+      .download-div{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+      }
+
+      /* POPUP*/
+
+      /*
+      .modal{
+        
+        display: ;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        min-width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(2px);
+        z-index: 199;
+      }
+      section{
+        padding: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw;
+        box-shadow: 2px 5px 5px rgba(161, 161, 161, 0.808);
+        position: absolute;
+        background-color: orange;
+        z-index: 200;
+        flex-direction: column;
+        border-radius: 10px;
+        position: absolute;
+        top: 25vh;
+        bottom: 25vh;
+        left: 25vw;
+        right: 25vw;
+      }
+
+      section p{
+        font-size: 70%;
+      }*/
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- This modal div will enable us to center our section pop up with the page-->
+  
+    
+
+    <div class="download-div">
+      <a href="dcodeprodigy.pdf" download="JTSF-PROPOSED-SCHEME-2024-UTME">
+        <button class="download"  >
+          DOWNLOAD AS PDF
+        </button>
+      </a>
+      
+    </div>
+    
+    <table>
+        <caption>JTSF > PHYSICS > SCHEME</caption>
+      <thead>
+        <th class="header js">Week</th>
+        <th class="headerA js">Date</th>
+        <th class="header js">Time of the week</th>
+        <th class="headerA js">Topics</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="weeks">Week 1</th>
+          <th scope="row" id="wk1-top1">17<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Tuesday</td>
+          <td>
+            Motion in a circle,<br />
+            Simple Harmonic Motion
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">18<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Thursday</td>
+          <td>
+            Gravitational Field<br />
+            3/4 of Equilibrium of Forces
+          </td>
+        </tr>
+        <th scope="row">19<sup>th</sup> October 2023</th>
+        <td class="time-of-week">Friday</td>
+        <td>
+          1/4 of Equilibrium of Forces,<br />
+          Work, Energy and Power<br />
+          Energy and Society
+        </td>
+
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="weeksA">Week 2</th>
+          <th scope="row">24<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Tuesday</td>
+          <td>Friction</td>
+        </tr>
+        <tr>
+          <th scope="row">26<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Thursday</td>
+          <td>Mechanical Energy<br /></td>
+        </tr>
+        <th scope="row">27<sup>th</sup> October 2023</th>
+        <td class="time-of-week">Friday</td>
+        <td>
+          Elasticity in Solids,<br />
+          Pressure
+        </td>
+
+        <!--Row 3-->
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="weeks">Week 3</th>
+          <th scope="row">7<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Tuesday</td>
+          <td>
+            Liquid at rest,<br />
+            Temperature and Measurement
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">9<sup>th</sup> October 2023</th>
+          <td class="time-of-week">Thursday</td>
+          <td>
+            Expansion<br />
+            Gas Laws
+          </td>
+        </tr>
+        <th scope="row">10<sup>th</sup> October 2023</th>
+        <td class="time-of-week">Friday</td>
+        <td>
+          Quantity of Heat,<br />
+          Change of State
+        </td>
+
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="weeksA">Week 4</th>
+          <th scope="row">14th<sup>th</sup> November 2023</th>
+          <td class="time-of-week">Tuesday</td>
+          <td>Vapours,<br /></td>
+        </tr>
+        <tr>
+          <th scope="row">16<sup>th</sup> November 2023</th>
+          <td class="time-of-week">Thursday</td>
+          <td>
+            Structure of Matter and Kinetic Theory<br />
+            Heat Transfer
+          </td>
+        </tr>
+        <th scope="row">17<sup>th</sup> November 2023</th>
+        <td class="time-of-week">Friday</td>
+        <td>Waves</td>
+
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="weeks">Week 5</th>
+          <th scope="row">21<sup>st</sup> November 2023</th>
+          <td class="time-of-week">Tuesday</td>
+          <td>
+            Propagation of sound waves,<br>
+            Characteristics of Sound Waves
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">23<sup>rd</sup> October 2023</th>
+          <td class="time-of-week">Thursday</td>
+          <td>
+            Light Energy<br />
+            Reflection &#8544;
+          </td>
+        </tr>
+        <th scope="row">24<sup>th</sup> October 2023</th>
+        <td class="time-of-week">Friday</td>
+        <td>
+          Reflection II, <br>
+          Refraction [Uhmm, we may need some more time here☹]
+        </td>
+
+        <tr>
+            <th rowspan="3" scope="rowgroup" class="weeksA">Week 6</th>
+            <th scope="row">28<sup>th</sup> November 2023</th>
+            <td class="time-of-week">Tuesday</td>
+            <td>
+              Optical Instrument,<br>
+              Dispersion
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">30<sup>th</sup> November 2023</th>
+            <td class="time-of-week">Thursday</td>
+            <td>
+              Dispersion II<br />
+              Electrostatics;
+            </td>
+          </tr>
+          <th scope="row">1<sup>st</sup> December 2023</th>
+          <td class="time-of-week">Friday</td>
+          <td>
+            Capacitors
+          </td>
+
+          <tr>
+            <th rowspan="3" scope="rowgroup" class="weeks">Week 7</th>
+            <th scope="row">12<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Tuesday</td>
+            <td>
+              Electric Cells
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">14<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Thursday</td>
+            <td>
+              Current Electricity
+            </td>
+          </tr>
+          <th scope="row">15<sup>th</sup> December 2023</th>
+          <td class="time-of-week">Friday</td>
+          <td>
+           Electrical Power and Energy, <br>
+            1/2 Magnetic Fields
+          </td>
+  
+          <tr>
+            <th rowspan="3" scope="rowgroup" class="weeksA">Week 8</th>
+            <th scope="row">19<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Tuesday</td>
+            <td>
+              Force on a Current Carrying Conductor
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">20<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Thursday</td>
+            <td>
+              Electromagnetic Induction I
+            </td>
+          </tr>
+          <th scope="row">21<sup>st</sup> December 2023</th>
+          <td class="time-of-week">Friday</td>
+          <td>
+            Electromagnetic Induction II, <br>
+            AC Circuits II
+          </td>
+  
+          <tr>
+            <th rowspan="3" scope="rowgroup" class="weeks">Week 9</th>
+            <th scope="row">25<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Tuesday</td>
+            <td>
+              Conduction through Liquids & Gases, <br>
+              A.C Currents
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">27<sup>th</sup> December 2023</th>
+            <td class="time-of-week">Thursday</td>
+            <td>
+              Radioactivity<br />
+              Elementary Modern Physics;
+            </td>
+          </tr>
+          <th scope="row">28<sup>th</sup> December 2023</th>
+          <td class="time-of-week">Friday</td>
+          <td>
+            Introductory Electronics
+          </td>
+  
+      </tbody>
+    </table>
+
+
+    <script>
+      let width = screen.width;
+      document.querySelector("body").onload = function() {showPopup()};
+
+      function showPopup(){
+        if (width <= 630){
+        alert("Hi there, You may want to rotate your screen to enhance readability");
+      }
+      }
+      
+    </script>
+  </body>
+</html>
